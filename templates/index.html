@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Model Predictions</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Model Predictions</h1>
+    <button id="predict_8h">Predict 8h</button>
+    <div id="results"></div>
+    <div id="plot"></div>
+
+
+<button id="predict_8h_wsen">Predict 8h WSEN</button>
+    <div id="results"></div>
+    <div id="plot"></div>
+
+	<button id="predict_12h">Predict 12h</button>
+	<div id="results"></div>
+	<div id="plot"></div>
+
+	<button id="predict_12h_wsen">Predict 12h WSEN</button>
+	<div id="results"></div>
+	<div id="plot"></div>
+    <script>
+        $('#predict_8h').click(function() {
+            fetchPrediction('/predict_8h');
+        });
+
+		$('#predict_8h_wsen').click(function() {
+			fetchPrediction('/predict_8h_wsen');
+		});
+
+		$('#predict_12h').click(function() {
+			fetchPrediction('/predict_12h');
+		});
+
+		$('#predict_12h_wsen').click(function() {
+			fetchPrediction('/predict_12h_wsen');
+		});
+
+    </script>
+</body>
+</html>
